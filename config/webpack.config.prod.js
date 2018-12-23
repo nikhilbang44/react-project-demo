@@ -1,5 +1,5 @@
+// eslint-disable-next-line strict
 'use strict';
-
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -349,6 +349,7 @@ module.exports = {
             exclude: cssModuleRegex,
             loader: getStyleLoaders({
               importLoaders: 1,
+              modules: true,
               sourceMap: shouldUseSourceMap,
             }),
             // Don't consider CSS imports dead code even if the
